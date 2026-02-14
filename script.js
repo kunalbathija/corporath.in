@@ -68,23 +68,18 @@ function handleSwipe(endX) {
 }
 
 function toggleMenu() {
-    const nav = document.getElementById("navLinks");
-
-    if (nav.style.display === "flex") {
-        nav.style.display = "none";
-    } else {
-        nav.style.display = "flex";
-    }
+    document.getElementById("navLinks").classList.toggle("active");
 }
 
 /* Close menu when any nav link is clicked (mobile) */
 document.querySelectorAll("#navLinks a").forEach(link => {
     link.addEventListener("click", () => {
         if (window.innerWidth <= 768) {
-            document.getElementById("navLinks").style.display = "none";
+            document.getElementById("navLinks").classList.remove("active");
         }
     });
 });
+
 
 /* Show button when scrolling */
 window.addEventListener("scroll", () => {
@@ -106,13 +101,17 @@ function scrollToTop() {
 }
 
 function openModal(src) {
-    document.getElementById("imageModal").style.display = "block";
-    document.getElementById("modalImage").src = src;
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+
+    modalImg.src = src;
+    modal.classList.add("show");
 }
 
 function closeModal() {
-    document.getElementById("imageModal").style.display = "none";
+    document.getElementById("imageModal").classList.remove("show");
 }
+
 
 /* Close when clicking outside image */
 window.addEventListener("click", function(event) {
@@ -139,4 +138,16 @@ function shareWebsite() {
         alert("Sharing not supported on this device. Copy this link: " + window.location.href);
     }
 }
+
+document.querySelectorAll(".carousel-img").forEach(img => {
+    img.addEventListener("click", () => {
+        openModal(img.src);
+    });
+});
+
+document.addEventListener("keydown", function(e) {
+    if (e.key === "Escape") {
+        closeModal();
+    }
+});
 

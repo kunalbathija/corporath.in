@@ -4,8 +4,20 @@
     <meta charset="UTF-8">
     <title>CorpoRath | Premium Corporate Commute</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta name="description" content="CorpoRath provides comfortable corporate bus service from Ambernath to Airoli. Daily, weekly and monthly commute plans available.">
+    <meta name="keywords" content="Ambernath to Airoli bus, corporate commute, office bus service, CorpoRath">
+    <meta name="author" content="CorpoRath">
+    <meta property="og:title" content="CorpoRath - Premium Corporate Commute">
+    <meta property="og:description" content="Comfortable corporate bus service from Ambernath to Airoli. Travel relaxed. Arrive refreshed.">
+    <meta property="og:image" content="https://corporath.in/assets/logo.jpg">
+    <meta property="og:url" content="https://corporath.in">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="assets/logo.jpg">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,13 +29,15 @@
             <h1>Corpo<span>Rath</span></h1>
         </div>
 
-        <div class="hamburger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
 
         <div class="nav-links" id="navLinks">
+            <a href="#home">Home</a>
+            <a href="#pricing">Fare Plans</a>
             <a href="#about">About</a>
             <a href="#services">Services</a>
             <a href="#journey">Journey</a>
@@ -34,36 +48,36 @@
 
 
 <!-- HERO CAROUSEL -->
-<section class="hero-carousel">
+<section id="home" class="hero-carousel">
     <div class="carousel-container">
         <div class="carousel-track">
 
             <div class="slide">
-                <img src="assets/image_1.jpeg" class="active" onclick="openModal(this.src)">
+                <img src="assets/image_1.jpeg" loading="lazy" class="carousel-img active">
             </div>
 
             <div class="slide">
-                <img src="assets/image_2.png" onclick="openModal(this.src)">
+                <img src="assets/image_2.png" loading="lazy" class="carousel-img">
             </div>
 
             <div class="slide">
-                <img src="assets/image_3.jpeg" onclick="openModal(this.src)">
+                <img src="assets/image_3.jpeg" loading="lazy" class="carousel-img">
             </div>
 
             <div class="slide">
-                <img src="assets/image_4.jpg" onclick="openModal(this.src)">
+                <img src="assets/image_4.jpg" loading="lazy" class="carousel-img">
             </div>
 
              <div class="slide">
-                <img src="assets/image_5.jpg" onclick="openModal(this.src)">
+                <img src="assets/image_5.jpg" loading="lazy" class="carousel-img">
             </div>
 
              <div class="slide">
-                <img src="assets/image_6.png" onclick="openModal(this.src)">
+                <img src="assets/image_6.png" loading="lazy" class="carousel-img">
             </div>
 
              <div class="slide">
-                <img src="assets/image_7.jpg" onclick="openModal(this.src)">
+                <img src="assets/image_7.jpg" loading="lazy" class="carousel-img">
             </div>
         </div>
     </div>
@@ -73,7 +87,7 @@
 
 <!-- IMAGE MODAL -->
 <div id="imageModal" class="modal">
-    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="close" onclick="closeModal()" aria-label="Close image">&times;</span>
     <img class="modal-content" id="modalImage">
 </div>
 
@@ -157,7 +171,7 @@
 
         <!-- Forward Journey -->
         <div class="journey-card">
-            <h3>Forward Journey</h3>
+            <h3>Forward Journey (Morning)</h3>
 
             <h4>Pickups</h4>
             <ul>
@@ -186,7 +200,7 @@
 
         <!-- Return Journey -->
         <div class="journey-card">
-            <h3>Return Journey</h3>
+            <h3>Return Journey (Evening)</h3>
 
             <h4>Pickups</h4>
             <ul>
@@ -229,7 +243,9 @@
             📞 Call Now
         </a>
 
-        <a href="https://wa.me/917219580958" target="_blank" class="whatsapp-btn">
+       <a href="https://wa.me/917219580958?text=Hello,%0A%0AI%20would%20like%20to%20reserve%20a%20seat%20with%20CorpoRath.%20Please%20find%20my%20details%20below:%0A%0AName:%0APhone%20Number:%0APickup%20Point:%0ADrop%20Point:%0APlan%20(Daily%20/%20Weekly%20/%20Monthly):%0ANumber%20of%20Days:%0APreferred%20Timing%20(Morning%20/%20Evening%20/%20Both):%0A%0AThank%20you."
+            target="_blank"
+            class="whatsapp-btn">
             📱 WhatsApp
         </a>
 
@@ -265,9 +281,9 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
-
 <button id="topBtn" onclick="scrollToTop()">↑</button>
+
+<script src="script.js" defer></script>
 
 </body>
 </html>

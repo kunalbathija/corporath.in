@@ -8,6 +8,7 @@ body {
     font-family: 'Poppins', sans-serif;
     background: #0f172a;
     color: white;
+    -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -51,25 +52,39 @@ nav h1 span {
     color: #22c55e;
 }
 
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
 .nav-links a {
     color: white;
     text-decoration: none;
-    margin-left: 25px;
     font-weight: 500;
 }
 
 .hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
     display: none;
     flex-direction: column;
-    cursor: pointer;
+    justify-content: center;
+    padding: 0;
 }
 
-.hamburger div {
+.hamburger span {
     height: 3px;
     width: 25px;
     background: white;
     margin: 4px 0;
     border-radius: 5px;
+}
+
+@media(max-width:768px){
+    .hamburger {
+        display: flex;
+    }
 }
 
 /* MOBILE NAV */
@@ -84,19 +99,19 @@ nav h1 span {
     }
 
     .nav-links {
+        display: none;
         position: absolute;
         top: 70px;
         right: 0;
         background: #1e293b;
         width: 200px;
-        display: none;
         flex-direction: column;
         padding: 20px;
         border-radius: 10px;
     }
 
-    .nav-links a {
-        margin: 10px 0;
+    .nav-links.active {
+        display: flex;
     }
 
     .hamburger {
@@ -105,6 +120,11 @@ nav h1 span {
 }
 
 /* HERO CAROUSEL */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 .hero-carousel {
     padding: 40px 8%;
@@ -120,6 +140,7 @@ nav h1 span {
 .carousel-track {
     display: flex;
     transition: transform 0.4s ease;
+    will-change: transform;
 }
 
 .slide {
@@ -213,6 +234,7 @@ nav h1 span {
 .section {
     padding: 80px 8%;
     text-align: center;
+    scroll-margin-top: 80px;
 }
 
 .dark {
@@ -246,6 +268,8 @@ nav h1 span {
     background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(6px);
     text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .modal-content {
@@ -253,6 +277,11 @@ nav h1 span {
     max-height: 80vh;
     margin-top: 40px;
     border-radius: 15px;
+}
+
+.modal.show {
+    display: block;
+    opacity: 1;
 }
 
 .close {
@@ -303,11 +332,10 @@ nav h1 span {
     background: #16a34a;
 }
 
-/* Share Button */
 .share-btn {
     padding: 12px 24px;
-    background: transparent;
-    border: 2px solid #22c55e;
+    background: #334155;
+    border: 1px solid #22c55e;
     color: white;
     border-radius: 30px;
     cursor: pointer;
@@ -471,18 +499,3 @@ nav h1 span {
     color: #22c55e;
 }
 
-.share-btn {
-    margin-top: 15px;
-    padding: 12px 24px;
-    background: #334155;
-    color: white;
-    border: 1px solid #22c55e;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.share-btn:hover {
-    background: #22c55e;
-}
