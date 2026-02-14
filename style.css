@@ -10,6 +10,10 @@ body {
     color: white;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* NAV */
 
 .brand {
