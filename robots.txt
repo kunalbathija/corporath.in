@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://corporath.in/sitemap.xml
