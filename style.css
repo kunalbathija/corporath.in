@@ -261,21 +261,73 @@ nav h1 span {
     cursor: pointer;
 }
 
+.contact-buttons {
+    margin-top: 25px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Call Button */
+.call-btn {
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.call-btn:hover {
+    background: #1d4ed8;
+}
+
+/* WhatsApp Button */
 .whatsapp-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 14px 28px;
+    padding: 12px 24px;
     background: #22c55e;
     color: white;
     border-radius: 30px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 500;
     transition: 0.3s;
 }
 
 .whatsapp-btn:hover {
     background: #16a34a;
 }
+
+/* Share Button */
+.share-btn {
+    padding: 12px 24px;
+    background: transparent;
+    border: 2px solid #22c55e;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.share-btn:hover {
+    background: #22c55e;
+}
+
+@media(max-width:768px){
+    .contact-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-buttons a,
+    .contact-buttons button {
+        width: 80%;
+        text-align: center;
+    }
+}
+
 
 .route {
     margin-top: 20px;
@@ -415,3 +467,18 @@ nav h1 span {
     color: #22c55e;
 }
 
+.share-btn {
+    margin-top: 15px;
+    padding: 12px 24px;
+    background: #334155;
+    color: white;
+    border: 1px solid #22c55e;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.share-btn:hover {
+    background: #22c55e;
+}

@@ -122,3 +122,21 @@ window.addEventListener("click", function(event) {
     }
 });
 
+function shareWebsite() {
+
+    const shareData = {
+        title: "CorpoRath - Premium Corporate Commute",
+        text: "Travel stress-free from Ambernath to Airoli with CorpoRath 🚍✨ Comfortable corporate commute service.",
+        url: window.location.href
+    };
+
+    if (navigator.share) {
+        navigator.share(shareData)
+            .then(() => console.log("Shared successfully"))
+            .catch((error) => console.log("Sharing failed", error));
+    } else {
+        // Fallback for desktop
+        alert("Sharing not supported on this device. Copy this link: " + window.location.href);
+    }
+}
+
