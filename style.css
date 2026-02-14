@@ -121,7 +121,7 @@ img {
 }
 
 .hero-carousel {
-    padding: 50px 8%;
+    padding: 40px 8% 30px;
 }
 
 .carousel-container {
@@ -175,7 +175,7 @@ img {
 /* SECTIONS */
 
 .section {
-    padding: 90px 8%;
+    padding: 60px 8%;
     text-align: center;
     scroll-margin-top: 80px;
 }
@@ -195,8 +195,8 @@ img {
 .pricing-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    gap: 25px;
+    margin-top: 30px;
 }
 
 .price-card {
@@ -237,8 +237,8 @@ img {
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    margin-top: 40px;
+    gap: 20px;
+    margin-top: 30px;
 }
 
 .card {
@@ -253,8 +253,8 @@ img {
 .journey-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
+    gap: 25px;
+    margin-top: 30px;
 }
 
 .journey-card {
