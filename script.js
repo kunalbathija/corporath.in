@@ -105,3 +105,20 @@ function scrollToTop() {
     });
 }
 
+function openModal(src) {
+    document.getElementById("imageModal").style.display = "block";
+    document.getElementById("modalImage").src = src;
+}
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
+
+/* Close when clicking outside image */
+window.addEventListener("click", function(event) {
+    const modal = document.getElementById("imageModal");
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+

@@ -39,37 +39,43 @@
         <div class="carousel-track">
 
             <div class="slide">
-                <img src="assets/image_1.jpeg" class="active">
+                <img src="assets/image_1.jpeg" class="active" onclick="openModal(this.src)">
             </div>
 
             <div class="slide">
-                <img src="assets/image_2.png">
+                <img src="assets/image_2.png" onclick="openModal(this.src)">
             </div>
 
             <div class="slide">
-                <img src="assets/image_3.jpeg">
+                <img src="assets/image_3.jpeg" onclick="openModal(this.src)">
             </div>
 
             <div class="slide">
-                <img src="assets/image_4.jpg">
+                <img src="assets/image_4.jpg" onclick="openModal(this.src)">
             </div>
 
              <div class="slide">
-                <img src="assets/image_5.jpg">
+                <img src="assets/image_5.jpg" onclick="openModal(this.src)">
             </div>
 
              <div class="slide">
-                <img src="assets/image_6.png">
+                <img src="assets/image_6.png" onclick="openModal(this.src)">
             </div>
 
              <div class="slide">
-                <img src="assets/image_7.jpg">
+                <img src="assets/image_7.jpg" onclick="openModal(this.src)">
             </div>
         </div>
     </div>
 
     <div class="carousel-dots"></div>
 </section>
+
+<!-- IMAGE MODAL -->
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
 
 <section id="pricing" class="section pricing-section">
     <h2>Fare Plans</h2>
@@ -102,7 +108,7 @@
             </div>
         </div>
 
-        <div class="price-card highlight">
+        <div class="price-card">
             <h3>Monthly</h3>
             <p class="sub">22 Days</p>
             <div class="price-row">
