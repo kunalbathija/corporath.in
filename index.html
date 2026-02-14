@@ -247,12 +247,8 @@
        <a href="https://wa.me/917219580958?text=Hello,%0A%0AI%20would%20like%20to%20reserve%20a%20seat%20with%20CorpoRath.%20Please%20find%20my%20details%20below:%0A%0AName:%0APhone%20Number:%0APickup%20Point:%0ADrop%20Point:%0APlan%20(Daily%20/%20Weekly%20/%20Monthly):%0ANumber%20of%20Days:%0APreferred%20Timing%20(Morning%20/%20Evening%20/%20Both):%0A%0AThank%20you."
             target="_blank"
             class="whatsapp-btn">
-             WhatsApp
+             Open WhatsApp
         </a>
-
-        <button class="share-btn" onclick="shareWebsite()">
-            🔗 Share
-        </button>
 
     </div>
 </section>
@@ -270,15 +266,28 @@
             </a>
         </p>
 
-        <a href="https://www.instagram.com/corporath_easy_travel/"
-            target="_blank"
-            rel="noopener noreferrer"
-            onclick="window.open(this.href, '_blank'); return false;">
-            📸 View Instagram Profile
-        </a>
+        <div class="footer-social">
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/corporath_easy_travel/"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="footer-icon">
+                <img src="assets/instagram.png" alt="Instagram">
+                <span>Instagram</span>
+            </a>
+
+            <!-- Share -->
+            <button class="footer-icon" onclick="shareWebsite()">
+                <img src="assets/send.png" alt="Share">
+                <span>Share</span>
+            </button>
+
+        </div>
 
     </div>
 </footer>
+
 
 <button id="topBtn" onclick="scrollToTop()">↑</button>
 

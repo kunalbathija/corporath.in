@@ -335,21 +335,6 @@ img {
     background: #1ebe5d;
 }
 
-/* Share Button */
-.share-btn {
-    padding: 12px 24px;
-    background: #e2e8f0;
-    border: none;
-    color: #0f172a;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: 500;
-    transition: 0.3s;
-}
-
-.share-btn:hover {
-    background: #cbd5e1;
-}
 
 @media(max-width:768px){
     .contact-buttons {
@@ -432,6 +417,44 @@ img {
 .footer a:hover {
     color: #1f6fb3;
 }
+
+.footer-social {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.footer-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    background: #f1f5f9;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    color: #0f172a;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.footer-icon img {
+    width: 18px;
+    height: 18px;
+}
+
+.footer-icon:hover {
+    background: #2787d6;
+    color: white;
+}
+
+.footer-icon:hover img {
+    filter: brightness(0) invert(1);
+}
+
 
 /* GO TO TOP BUTTON */
 
