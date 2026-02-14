@@ -78,7 +78,7 @@ nav h1 span {
     nav h1 {
         font-size: 18px;
     }
-    
+
     .nav-links {
         position: absolute;
         top: 70px;
@@ -151,6 +151,57 @@ nav h1 span {
 
 .carousel-dots span.active {
     background: #22c55e;
+}
+
+.pricing-section {
+    background: #111827;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.price-card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(34,197,94,0.1);
+    transition: 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 30px rgba(34,197,94,0.3);
+}
+
+.price-card h3 {
+    color: #22c55e;
+    font-size: 22px;
+}
+
+.sub {
+    color: #94a3b8;
+    margin-bottom: 20px;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.price {
+    font-weight: 600;
+    color: #22c55e;
+}
+
+.highlight {
+    border: 2px solid #22c55e;
 }
 
 /* SECTIONS */
@@ -292,21 +343,34 @@ nav h1 span {
     position: fixed;
     bottom: 30px;
     right: 30px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     background: #22c55e;
     color: white;
     border: none;
-    padding: 12px 16px;
+
     border-radius: 50%;
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: bold;
+
     cursor: pointer;
     display: none;
-    box-shadow: 0 0 15px rgba(34,197,94,0.5);
-    transition: 0.3s;
+
+    box-shadow: 0 8px 20px rgba(34,197,94,0.4);
+    transition: all 0.3s ease;
 }
 
 #topBtn:hover {
     background: #16a34a;
+    transform: translateY(-4px);
 }
+
 
 .contact-name {
     margin-top: 15px;
