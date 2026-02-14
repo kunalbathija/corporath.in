@@ -90,28 +90,6 @@ nav h1 span {
     border-radius: 5px;
 }
 
-@media(max-width:768px){
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        background: #ffffff;
-        width: 220px;
-        flex-direction: column;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
 
 /* HERO CAROUSEL */
 
@@ -397,7 +375,7 @@ img {
 
 .footer {
     background: #ffffff;
-    padding: 40px 20px;
+    padding: 25px 20px 20px;
     text-align: center;
     border-top: 1px solid #e2e8f0;
 }
@@ -419,10 +397,10 @@ img {
 }
 
 .footer-social {
-    margin-top: 20px;
+    margin-top: 12px;
     display: flex;
     justify-content: center;
-    gap: 25px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
@@ -460,8 +438,8 @@ img {
 
 #topBtn {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 25px;
+    right: 25px;
     width: 50px;
     height: 50px;
     display: flex;
@@ -477,9 +455,37 @@ img {
     display: none;
     box-shadow: 0 8px 20px rgba(39,135,214,0.4);
     transition: all 0.3s ease;
+    z-index: 999; /* important */
 }
 
 #topBtn:hover {
     background: #1f6fb3;
     transform: translateY(-4px);
+}
+
+@media(max-width:768px){
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #ffffff;
+        width: 220px;
+        flex-direction: column;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    #topBtn {
+        bottom: 100px;  /* pushes it above footer icons */
+    }
 }
