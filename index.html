@@ -12,7 +12,10 @@
 
 <nav>
     <div class="nav-container">
-        <h1>Corpo<span>Rath</span></h1>
+        <div class="brand">
+            <img src="assets/logo.jpg" alt="CorpoRath Logo" class="logo-img">
+            <h1>Corpo<span>Rath</span></h1>
+        </div>
 
         <div class="hamburger" onclick="toggleMenu()">
             <div></div>
@@ -36,37 +39,32 @@
         <div class="carousel-track">
 
             <div class="slide">
-                <img src="assets/image_1.png" class="active">
+                <img src="assets/image_1.jpeg" class="active">
             </div>
 
             <div class="slide">
-                <img src="assets/image_2.jpg">
+                <img src="assets/image_2.png">
             </div>
 
             <div class="slide">
-                <img src="assets/image_3.jpg">
+                <img src="assets/image_3.jpeg">
             </div>
 
             <div class="slide">
-                <img src="assets/image_4.png">
+                <img src="assets/image_4.jpg">
             </div>
 
              <div class="slide">
-                <img src="assets/image_5.png">
+                <img src="assets/image_5.jpg">
             </div>
 
              <div class="slide">
-                <img src="assets/image_6.jpg">
+                <img src="assets/image_6.png">
             </div>
 
              <div class="slide">
                 <img src="assets/image_7.jpg">
             </div>
-
-            <div class="slide">
-                <img src="assets/image_8.jpg">
-            </div>  
-
         </div>
     </div>
 
@@ -168,6 +166,10 @@
 <section id="contact" class="section">
     <h2>Contact Us</h2>
 
+    <p class="contact-name">
+        Contact Person: <strong>Krishna Bathija</strong>
+    </p>
+
     <a href="https://wa.me/917219580958" target="_blank" class="whatsapp-btn">
         📱 Chat on WhatsApp
     </a>
@@ -175,18 +177,32 @@
     <p class="route">Route: Ambernath → Airoli</p>
 </section>
 
-<footer>
-    <p>© 2026 CorpoRath. All rights reserved.</p>
-    <p class="developer">
-        Website developed by 
-        <a href="https://www.linkedin.com/in/kunal--bathija/" target="_blank">
-            Kunal Bathija
-        </a>
-    </p>
+<footer class="footer">
+    <div class="footer-content">
+
+        <p>© 2026 CorpoRath. All rights reserved.</p>
+
+        <p class="developer">
+            Website developed by 
+            <a href="https://www.linkedin.com/in/kunal--bathija" target="_blank">
+                Kunal Bathija
+            </a>
+        </p>
+
+        <div class="social-links">
+            <a href="https://www.instagram.com/corporath_easy_travel/" 
+               target="_blank" 
+               class="instagram">
+                📸 Follow us on Instagram
+            </a>
+        </div>
+
+    </div>
 </footer>
 
-
 <script src="script.js"></script>
+
+<button id="topBtn" onclick="scrollToTop()">↑</button>
 
 </body>
 </html>

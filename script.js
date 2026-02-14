@@ -69,5 +69,39 @@ function handleSwipe(endX) {
 
 function toggleMenu() {
     const nav = document.getElementById("navLinks");
-    nav.style.display = nav.style.display === "flex" ? "none" : "flex";
+
+    if (nav.style.display === "flex") {
+        nav.style.display = "none";
+    } else {
+        nav.style.display = "flex";
+    }
 }
+
+/* Close menu when any nav link is clicked (mobile) */
+document.querySelectorAll("#navLinks a").forEach(link => {
+    link.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+            document.getElementById("navLinks").style.display = "none";
+        }
+    });
+});
+
+/* Show button when scrolling */
+window.addEventListener("scroll", () => {
+    const topBtn = document.getElementById("topBtn");
+
+    if (window.scrollY > 300) {
+        topBtn.style.display = "block";
+    } else {
+        topBtn.style.display = "none";
+    }
+});
+
+/* Scroll to top smooth */
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
