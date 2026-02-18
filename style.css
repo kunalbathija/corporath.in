@@ -276,7 +276,7 @@ img {
 }
 
 .contact-buttons {
-    margin-top: 25px;
+    margin-top: 15px;
     display: flex;
     gap: 15px;
     justify-content: center;
@@ -299,7 +299,7 @@ img {
 }
 
 /* WhatsApp Button */
-.whatsapp-btn {
+.whatsapp-btn1 {
     padding: 12px 24px;
     background: #25d366;
     color: white;
@@ -309,7 +309,7 @@ img {
     transition: 0.3s;
 }
 
-.whatsapp-btn:hover {
+.whatsapp-btn1:hover {
     background: #1ebe5d;
 }
 
@@ -508,4 +508,129 @@ img {
         display: flex;
     }
 
+}
+
+/* ============================= */
+/* Fare Note */
+/* ============================= */
+
+.fare-note {
+    margin-top: 20px;
+    background: #f0f7ff;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+    color: #0056b3;
+}
+
+/* ============================= */
+/* Payment Section */
+/* ============================= */
+
+.payment-section {
+    padding: 60px 20px;
+    background: #f9fafc;
+    text-align: center;
+}
+
+.payment-section h2 {
+    margin-bottom: 10px;
+}
+
+.payment-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.upi-details {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.upi-id {
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    margin: 10px 0;
+}
+
+.payment-note {
+    font-size: 14px;
+    color: #555;
+}
+
+.qr-code img {
+    width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================= */
+/* Instructions Section */
+/* ============================= */
+
+.instructions-section {
+    padding: 60px 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+.instruction-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto 0 auto;
+    max-width: 600px;
+    text-align: left;   /* keeps text clean */
+}
+
+.instruction-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin: 15px 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.instruction-list li::before {
+    content: "✔";
+    color: #28a745;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+/* ============================= */
+/* WhatsApp Section */
+/* ============================= */
+
+.whatsapp-section {
+    padding: 20px 20px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    text-align: center;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: white;
+    color: #128c7e;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
 }
