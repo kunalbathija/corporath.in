@@ -591,8 +591,7 @@ img {
 }
 
 .instruction-list li {
-    display: flex;
-    align-items: flex-start;
+    display: block;
     gap: 12px;
     margin: 15px 0;
     font-size: 16px;
@@ -604,6 +603,12 @@ img {
     color: #28a745;
     font-weight: bold;
     font-size: 18px;
+}
+
+.highlight-time {
+    text-decoration: underline;
+    font-weight: 600;
+    display: inline;
 }
 
 
